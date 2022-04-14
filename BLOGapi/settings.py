@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth.registration',
     'backend',
+    'corsheaders',
 ]
 
 SITE_ID = 1
@@ -58,6 +59,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'BLOGapi.urls'
@@ -100,6 +103,12 @@ DATABASES = {
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = False
+
+CORS_ALLOWED_ORIGINS = [
+
+    "http://localhost:3000",
+
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
