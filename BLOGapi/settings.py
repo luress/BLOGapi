@@ -112,7 +112,7 @@ ACCOUNT_EMAIL_REQUIRED = False
 
 CORS_ALLOWED_ORIGINS = [
 
-    "http://localhost:3000",
+    "https://reactblog1234.herokuapp.com/",
 
 ]
 
